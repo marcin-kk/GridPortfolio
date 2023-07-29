@@ -204,3 +204,44 @@ body {
 		font-size: 22px;
 	}
 }
+
+.navbar .bar:nth-child(1) {
+	animation: flipBar1 1s forwards;
+}
+
+.navbar .bar:nth-child(2) {
+	animation: fadeBar2 2s forwards;
+}
+
+.navbar .bar:nth-child(3) {
+	animation: flipBar3 1s forwards;
+}
+
+@keyframes flipBar1 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(45deg) translate(4px, 10px);
+	}
+}
+
+@keyframes fadeBar2 {
+	from {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	to {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+}
+
+@keyframes flipBar3 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-45deg) translate(4px, -10px);
+	}
+}
