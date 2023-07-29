@@ -49,7 +49,9 @@ body {
 	align-items: center;
 }
 
-.navbar .bar {
+.bar1,
+.bar2,
+.bar3 {
 	background-color: black;
 	height: 4px;
 	width: 36px;
@@ -205,15 +207,15 @@ body {
 	}
 }
 
-.navbar .bar:nth-child(1) {
+.animateBar1 {
 	animation: flipBar1 1s forwards;
 }
 
-.navbar .bar:nth-child(2) {
+.animateBar2 {
 	animation: fadeBar2 2s forwards;
 }
 
-.navbar .bar:nth-child(3) {
+.animateBar3 {
 	animation: flipBar3 1s forwards;
 }
 
