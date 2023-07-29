@@ -49,6 +49,46 @@ body {
 	align-items: center;
 }
 
+.navbar .hamburger:hover {
+	cursor: pointer;
+}
+
+.mobile-nav {
+	width: 80px;
+	height: 100vh;
+	box-sizing: border-box;
+	background-color: white;
+	padding: 16px;
+	position: fixed;
+	top: 0;
+	right: -160px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s;
+}
+
+.mobile-nav img {
+	width: 24px;
+	height: 24px;
+}
+
+.mobile-nav a {
+	text-decoration: none;
+	color: black;
+	margin: 16px 0;
+}
+
+.openDrawer {
+	transform: translateX(-160px);
+}
+
+.mobile-nav a:hover {
+	text-decoration: underline;
+}
+
 .bar1,
 .bar2,
 .bar3 {
@@ -175,7 +215,7 @@ body {
 		box-sizing: border-box;
 		background-color: white;
 		width: 100%;
-		padding: 16px 24px;
+		padding: 16px 16px;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -207,16 +247,22 @@ body {
 	}
 }
 
+@media only screen and (min-width: 768px) {
+	.mobile-nav {
+		display: none;
+	}
+}
+
 .animateBar1 {
-	animation: flipBar1 1s forwards;
+	animation: flipBar1 0.5s forwards;
 }
 
 .animateBar2 {
-	animation: fadeBar2 2s forwards;
+	animation: fadeBar2 0.5s forwards;
 }
 
 .animateBar3 {
-	animation: flipBar3 1s forwards;
+	animation: flipBar3 0.5s forwards;
 }
 
 @keyframes flipBar1 {
